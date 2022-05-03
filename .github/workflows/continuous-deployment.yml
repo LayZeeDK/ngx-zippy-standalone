@@ -75,7 +75,7 @@ jobs:
       - name: Build web app
         run: yarn build --base-href=/${{ steps.repository-name.outputs.name }}/
       - name: Add 404 page with GitHub Pages support
-        run: cp build/github-pages/404.html ./dist/apps/${{ env.build-artifact-name }}/
+        run: cp build/github-pages/404.html ./dist/${{ env.build-artifact-name }}/
       - name: Upload web app build artifact
         uses: actions/upload-artifact@v3
         with:
