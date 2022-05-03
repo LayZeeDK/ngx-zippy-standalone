@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { CapitalizePipe } from './capitalize.pipe';
 import { ZippyComponent } from './zippy.component';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [CapitalizePipe, ZippyComponent],
   // Intentionally use `zippy` prefix for the root component
   // eslint-disable-next-line @angular-eslint/component-selector
