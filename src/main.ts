@@ -1,11 +1,5 @@
-import {
-  ApplicationInitStatus,
-  ApplicationRef,
-  enableProdMode,
-  ErrorHandler,
-  IterableDiffers,
-  ɵbootstrapApplication,
-} from '@angular/core';
+import { enableProdMode } from '@angular/core';
+import { bootstrapApplication } from '@angular/platform-browser';
 
 import { ZippyAppComponent } from './app/app.component';
 import { environment } from './environments/environment';
@@ -14,12 +8,4 @@ if (environment.production) {
   enableProdMode();
 }
 
-ɵbootstrapApplication({
-  appProviders: [
-    ErrorHandler,
-    ApplicationRef,
-    ApplicationInitStatus,
-    IterableDiffers,
-  ],
-  rootComponent: ZippyAppComponent,
-}).catch((err) => console.error(err));
+bootstrapApplication(ZippyAppComponent).catch((err) => console.error(err));
