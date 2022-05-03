@@ -109,3 +109,4 @@ jobs:
         with:
           branch: gh-pages
           folder: ${{ env.build-artifact-path }}
+          token: ${{ secrets.GITHUB_TOKEN }}
