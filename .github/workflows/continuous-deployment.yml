@@ -104,9 +104,8 @@ jobs:
           name: ${{ env.build-artifact-name }}
           path: ${{ env.build-artifact-path }}
 
-      - name: Deploy docs to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4.3.2
+      - name: Deploy app to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          branch: gh-pages
-          folder: ${{ env.build-artifact-path }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ${{ env.build-artifact-path }}
