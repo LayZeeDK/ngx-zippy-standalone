@@ -1,10 +1,18 @@
 import { Component } from '@angular/core';
 
+import { CapitalizePipe } from './capitalize.pipe';
+import { ZippyComponent } from './zippy.component';
+
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  imports: [CapitalizePipe, ZippyComponent],
+  selector: 'zippy-app',
+  standalone: true,
+  template: `
+    <app-zippy label="Click me">
+      {{ title | capitalize }}
+    </app-zippy>
+  `,
 })
-export class AppComponent {
-  title = 'angular-cli-14next15-workspace';
+export class ZippyAppComponent {
+  title = 'Standalone Application';
 }
