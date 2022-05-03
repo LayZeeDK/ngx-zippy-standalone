@@ -1,7 +1,7 @@
 import { enableProdMode } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
 
-import { ZippyAppComponent } from './app/app.component';
+import { ZippyAppComponent } from './app/zippy-app.component';
 import { environment } from './environments/environment';
 
 if (environment.production) {
