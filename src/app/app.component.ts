@@ -5,6 +5,8 @@ import { ZippyComponent } from './zippy.component';
 
 @Component({
   imports: [CapitalizePipe, ZippyComponent],
+  // Intentionally use `zippy` prefix for the root component
+  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'zippy-app',
   standalone: true,
   template: `
