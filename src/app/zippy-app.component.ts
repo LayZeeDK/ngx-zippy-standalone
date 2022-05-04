@@ -17,5 +17,5 @@ import { ZippyComponent } from './zippy.component';
   `,
 })
 export class ZippyAppComponent {
-  title = 'Standalone Application';
+  title = 'standalone application';
 }
